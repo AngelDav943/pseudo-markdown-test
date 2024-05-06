@@ -3,7 +3,7 @@ console.log(body)
 
 let res = [] 
 
-let iscompound = false
+let iscode = false
 let splitBody = body.split("\n")
 for (let i=0; i < splitBody.length; i++) {
 	let str = splitBody[i]
@@ -11,10 +11,10 @@ for (let i=0; i < splitBody.length; i++) {
 
 	let laststr = splitBody[i-1]
 
-	if (iscompound == true) {
+	if (iscode == true) {
 		res[res.length-1].content.push(str)
 
-		if (/```/g.test(str) == true) iscompound = false
+		if (/```/g.test(str) == true) iscode = false
 		continue
 	}
 	
@@ -43,7 +43,7 @@ for (let i=0; i < splitBody.length; i++) {
 				break
 			}
 		}
-		if (isvalid) iscompound = true
+		if (isvalid) iscode = true
 		strType = "code"
 	}
 
