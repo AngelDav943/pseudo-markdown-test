@@ -1,4 +1,4 @@
-const body = "# hello \n test \n www``` \n test \n in ``` \n something ** bolded text   **"
+const body = "# hello \n world \n www``` \n test \n in ``` \n something ** bolded text   **"
 
 let objectBody = []
 
